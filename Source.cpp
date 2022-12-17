@@ -14,11 +14,11 @@ void ReadCOM() {
         if (iSize > 0) {
             if (flag == true) {
                 if (flag2 == true) {
-                    cout << "Temperature: " << (float)sReceived * 1, 96 - 273;
+                    cout << "Temperature: " << (float)sReceived * 1,96 - 273;
                     flag = false;
                 }
                 else {
-                    cout << "Luminosity: " << (float)sReceived * 3, 2745;
+                    cout << "Luminosity: " << (float)sReceived * 3,2745;
                     flag = true;
                 }
                 flag = false;
@@ -39,7 +39,7 @@ int main() {
     if (!GetCommState(hSerial, &dcbSerialParams)) {
         cout << "getting state error\n";
     }
-    dcbSerialParams.BaudRate = CBR_9600;
+    dcbSerialParams.BaudRate = CBR_4800;
     dcbSerialParams.ByteSize = 8;
     dcbSerialParams.StopBits = ONESTOPBIT;
     dcbSerialParams.Parity = NOPARITY;
